@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="clues">
+        <item>clue 0: go to the basement</item>
+        <item>clue 1: go to the field</item>
+        <item>clue 2: go to the bedroom</item>
+        <item>clue 3: go to the kitchen</item>
+    </string-array>
+</resources>
