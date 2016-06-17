@@ -8,6 +8,7 @@ public class Clue {
 
     private String mClue;
     private int mId;
+    public static final String KEY="userCurrentClue";
 
     public Clue(String mClue, int mId) {
         this.mClue = mClue;

@@ -10,12 +10,39 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="You Win!"
+        android:text="Yahoo! You won!"
+        android:fontFamily="casual"
+        android:background="@android:color/holo_green_light"
+        android:textStyle="bold"
         android:textSize="35sp"
-        android:padding="60dp"
+        android:textColor="@android:color/white"
+        android:padding="40dp"
         android:gravity="center" />
 
+    <ImageView
+        android:src="@drawable/win"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"/>
 
+
+
+    <Button
+        android:id="@+id/one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop"
+        android:text="Reset"
+        android:textColor="@android:color/white"
+        android:textAllCaps="true"
+        android:fontFamily="casual"
+        android:textSize="35sp"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:background="@android:color/holo_green_light"
+        android:onClick="resetPage"/>
 
 
 

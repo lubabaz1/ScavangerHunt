@@ -7,14 +7,14 @@
     tools:context="com.example.lubabaislam.scavangerhunt.FoundClueActivity">
 
     <TextView
-        android:id="@+id/clue1_text_view"
+        android:id="@+id/clue0_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="100dp"
         android:padding="20dp"
         android:textAlignment="center"
-        android:text="You found a clue: )!"
+
         android:textSize="25sp" />
 
     <Button

@@ -7,26 +7,30 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.example.lubabaislam.scavangerhunt.DataObjects.Clue;
+
 public class StartDescriptionActivity extends AppCompatActivity {
+
+    public static int CLUE;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_description);
-
-
-
     }
 
-   public void starting(View view){
-       Intent intent = new Intent(this, CurrentClueActivity.class);
-       startActivity(intent);
+    public void goToCurrentClueActivity(View view)
+    {
+        Intent intent = new Intent(this, CurrentClueActivity.class);
+        startActivity(intent);
 
-       SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-       SharedPreferences.Editor editor = sharedPrefs.edit();
-       editor.putInt("UserCurrentClue",0);
-       editor.commit();
+        CLUE = 0;
 
-   }
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
+        SharedPreferences.Editor reset = sharedPreferences.edit();
+        reset.putInt(Clue.KEY, CLUE);
+        reset.commit();
+    }
 }
+

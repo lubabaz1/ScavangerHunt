@@ -7,20 +7,19 @@
     tools:context=".CurrentClueActivity">
 
     <TextView
-
+        android:id="@+id/clue_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Clue1: Speaks Korean"
         android:padding="4dp"
-        android:layout_margin="60dp"
+        android:layout_margin="30dp"
         android:textSize="25sp"
         android:textAlignment="center"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/progress_text_view"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0/1 clues completed"
         android:textSize="35sp"
         android:padding="4dp"
         android:gravity="center" />

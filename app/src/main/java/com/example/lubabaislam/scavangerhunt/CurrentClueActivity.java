@@ -5,37 +5,32 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
-
 import com.example.lubabaislam.scavangerhunt.DataObjects.Clue;
 
 public class CurrentClueActivity extends AppCompatActivity {
-    TextView mClueTextView;
 
-
+    public static int CLUE = 0;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
-
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_current_clue);
 
-        Clue[] clues=((MyApplication)getApplication()).getClues();
-        Clue clue1= clues[0];
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
-        mClueTextView.setText(clue1.getmClue());
-
-        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-
-        int myVariable= sharedPrefs.getInt("userCurrentClue",2);
-        int indexOfClueIWantt
+        int myVariable = sharedPreferences.getInt(Clue.KEY, CLUE);
 
 
+        Clue[] clues = ((MyApplication) getApplication()).getClues();
 
+        Clue firstClue = clues[myVariable];
 
+        TextView mClueTextView = (TextView) findViewById(R.id.clue_text_view);
+        TextView mClueProgressNumber = (TextView) findViewById(R.id.progress_text_view);
 
-
-
+        mClueTextView.setText(firstClue.getmClue());
+        mClueProgressNumber.setText(firstClue.getmId() + "/3 Clues Completed!");
 
     }
+
 }

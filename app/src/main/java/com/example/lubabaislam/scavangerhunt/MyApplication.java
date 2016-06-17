@@ -1,7 +1,6 @@
 package com.example.lubabaislam.scavangerhunt;
 
 import android.app.Application;
-import android.widget.TextView;
 
 import com.example.lubabaislam.scavangerhunt.DataObjects.Clue;
 
@@ -10,23 +9,21 @@ import com.example.lubabaislam.scavangerhunt.DataObjects.Clue;
  */
 public class MyApplication extends Application {
 
-    TextView mClueTextView;
-    Clue[] clues;
+    private Clue[] clues1;
 
     public void mCreate(){
         super.onCreate();
-        String[] clueStrings = getResources().getStringArray(R.array.clues);
-        clues = new Clue[clueStrings.length];
+        String[] clues = getResources().getStringArray(R.array.clues);
+        clues1 = new Clue[clues.length];
         for (int i=0; i<clues.length; i++)
         {
-            String clueStrings1= clueStrings[i];
-            Clue c = new Clue(clueStrings1, i);
-            clues[i] = c;
+            Clue c = new Clue (clues[i], i);
+            clues1[i]= c;
 
         }}
 
         public Clue[] getClues(){
-            return clues;
+            return clues1;
     }
 }
 
